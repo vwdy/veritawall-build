@@ -1,0 +1,21 @@
+export VERITAWALLWRKDIR="."
+export SRCCONF="`realpath ${VERITAWALLWRKDIR}/veritawall-src.conf`"
+export MAKEOBJDIRPREFIX="`realpath ${VERITAWALLWRKDIR}/obj`"
+export KERNCONF=VERITAWALL
+
+NCPUS=$(sysctl -n hw.ncpu)
+
+FBSD_TREE=`realpath ${VERITAWALLWRKDIR}/freebsd`
+FBSD_BRANCH=veritawall-13-stable
+PORT_BRANCH=2023Q3
+OVERLAY_PORTS=veritawall-overlay
+IMAGE_DIR="`realpath ${VERITAWALLWRKDIR}/image/`"
+PUBLIC_SRV="pkg@192.168.230.10"
+
+VERITAWALL_REPO="`realpath ${VERITAWALLWRKDIR}`/freebsd-base-repo/${FBSD_BRANCH}"
+
+date=$(date "+%Y%m%d-%H%M%S")
+LOGS_DIR=/tmp/builder_logs_${USER}_${date}
+PID_FILE=/tmp/build-${USER}-veritawall.pid
+
+export POUDRIERE_ETC="`realpath poudriere-conf/`"
