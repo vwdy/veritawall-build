@@ -1,10 +1,10 @@
-veritawall-overlay/
-freebsd-base-repo/
-freebsd-ports/
-freebsd/
-image/
-keys/
-obj/
-poudriere-base/
-poudriere-conf/poudriere.d/jails/
-poudriere-conf/poudriere.d/ports/
+# veritawall-overlay/
+# freebsd-base-repo/
+# freebsd-ports/
+# freebsd/
+# image/
+# keys/
+# obj/
+# poudriere-base/
+# poudriere-conf/poudriere.d/jails/
+# poudriere-conf/poudriere.d/ports/
